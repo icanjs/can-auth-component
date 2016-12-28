@@ -1,4 +1,4 @@
-<form class="auth-component-form" ($submit}={submitClicked}>
+<form class="auth-component-form" ($submit)={submitClicked}>
   <div class="messages" />
 
   <input class="auth-component-input"
