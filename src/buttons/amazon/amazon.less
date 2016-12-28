@@ -1,14 +1,18 @@
-.oauth-amazon {
-  background: #FFAD1D;
-  > * {
-    color: black;
-  }
-				
-  /* This shouldn't know about its implementation.  Move this somewhere else. */
-  &.one {
-    width: 154px;
-  }
-  span {
-    font-weight: 400;
+amazon-auth-button {
+  display: inline-block;
+  .oauth-amazon {
+    background: #FFAD1D;
+    > * {
+      color: black;
+    }
+          
+    /* This shouldn't know about its implementation.  Move this somewhere else. */
+    &.one {
+      width: 154px;
+    }
+    span {
+      font-weight: 400;
+    }
   }
 }
+  
