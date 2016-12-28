@@ -1,7 +1,9 @@
 <button class="auth-button oauth-{{classSuffix}}" title="Login with {{name}}">
   <a href="{{url}}" {{#if popup}}($click)="openPopup(%event, url)"{{/if}} >
-    {{#if logo}}
-      {{{logo}}}
+    {{#if svg}}
+      <span class="SVGInline">
+        {{{svg}}}
+      </span>
     {{else}}
       <img class='logo' src="{{img}}" alt="{{alt}}" />
     {{/if}}

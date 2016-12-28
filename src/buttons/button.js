@@ -17,7 +17,7 @@ export const ViewModel = DefineMap.extend({
   alt: 'string',
   text: 'string',
   popup: 'string',
-  logo: 'string',
+  svg: 'string',
   openPopup (ev, url) {
     ev.preventDefault();
     openPopup(url);
