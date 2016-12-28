@@ -6,7 +6,7 @@ import svg from './yahoo.svg';
 export const ViewModel = BaseViewModel.extend({
   name: {
     type: 'string',
-    value: 'Twitter'
+    value: 'Yahoo'
   },
   url: {
     type: 'string',
