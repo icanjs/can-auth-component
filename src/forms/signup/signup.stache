@@ -1,0 +1,23 @@
+<form class="auth-component-form" ($submit}={submitClicked}>
+  <div class="messages" />
+
+  <input class="auth-component-input"
+    type="{{usernameFieldType}}"
+    placeholder="{{usernamePlaceholder}}"
+    {($value)}="username"
+    required
+    tab-index="1" />
+
+  <input class="auth-component-input"
+    type="password"
+    placeholder="{{passwordPlaceholder}}"
+    {($value)}="password"
+    required
+    tab-index="1"/>
+
+  <div class='forgot-password'>
+    {{!--password strength meter will go here--}}
+  </div>
+
+  <button type='submit' tab-index='1'>{{buttonText}}</button>
+</form>
