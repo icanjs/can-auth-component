@@ -179,7 +179,7 @@ You'll generally only ever have to specify the `url`, `text`, and `popup` attrib
 ```jsx
 <can-import from="auth-component/buttons/facebook/" />
 
-<facebook-uth-button url="/auth/facebook" popup="true" text="Login with Facebook" />
+<facebook-auth-button url="/auth/facebook" popup="true" text="Login with Facebook" />
 ```
 
 If you don't specify a `text` attribute, you'll get a square button with an icon.  The button with `text` from the above code would look like the "Login with Facebook" button in this example:
