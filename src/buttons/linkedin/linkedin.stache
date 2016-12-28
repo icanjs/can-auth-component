@@ -1,0 +1,10 @@
+<can-import from="can-auth-component/buttons/button" />
+<can-import from="./linkedin.less" />
+
+<auth-button {name}="name"
+  {url}="url"
+  {svg}="svg"
+  {alt}="alt"
+  {text}="text"
+  {popup}="popup"
+/>
