@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/icanjs/can-auth-component.png?branch=master)](https://travis-ci.org/icanjs/can-auth-component)
 
-Compose a clean Auth UI with these simple React components.
+Compose a clean Auth UI with these simple CanJS components.
 
 There is also a matching React version: https://github.com/icanjs/auth-component
 
