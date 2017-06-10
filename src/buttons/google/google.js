@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import view from './google.stache';
-import {ViewModel as BaseViewModel} from '../button';
-import svg from './google.svg';
+import Component from 'can-component'
+import view from './google.stache'
+import {ViewModel as BaseViewModel} from '../button'
+import svg from './google.svg'
 
 export const ViewModel = BaseViewModel.extend({
   name: {
@@ -17,11 +17,10 @@ export const ViewModel = BaseViewModel.extend({
   },
   text: 'string',
   popup: 'boolean'
-});
+})
 
 export default Component.extend({
   tag: 'google-auth-button',
   ViewModel,
   view
-});
-
+})

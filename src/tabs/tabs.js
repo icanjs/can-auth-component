@@ -1,16 +1,20 @@
 import Component from 'can-component'
 import DefineMap from 'can-define/map/'
-import view from './auth-container.stache'
+import view from './tabs.stache'
+import './tabs.less'
 
 export const ViewModel = DefineMap.extend({
   activeTab: {
-    value: 'login',
     type: 'string'
+  },
+
+  tabClicked (tab) {
+    this.activeTab = tab
   }
 })
 
 export default Component.extend({
-  tag: 'auth-container',
+  tag: 'route-tabs',
   ViewModel,
   view
 })

@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import FormBaseViewModel from '../form-base-vm';
-import view from './signup.stache';
-import '../forms.less';
+import Component from 'can-component'
+import FormBaseViewModel from '../form-base-vm'
+import view from './signup.stache'
+import '../forms.less'
 
 export const ViewModel = FormBaseViewModel.extend({
   /**
@@ -17,10 +17,10 @@ export const ViewModel = FormBaseViewModel.extend({
   buttonText: {
     value: 'Sign Up'
   }
-});
+})
 
 export default Component.extend({
   tag: 'signup-form',
   ViewModel,
   view
-});
+})

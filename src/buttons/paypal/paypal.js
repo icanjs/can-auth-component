@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import view from './paypal.stache';
-import {ViewModel as BaseViewModel} from '../button';
-import svg from './paypal.svg';
+import Component from 'can-component'
+import view from './paypal.stache'
+import {ViewModel as BaseViewModel} from '../button'
+import svg from './paypal.svg'
 
 export const ViewModel = BaseViewModel.extend({
   name: {
@@ -17,11 +17,10 @@ export const ViewModel = BaseViewModel.extend({
   },
   text: 'string',
   popup: 'boolean'
-});
+})
 
 export default Component.extend({
   tag: 'paypal-auth-button',
   ViewModel,
   view
-});
-
+})

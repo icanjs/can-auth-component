@@ -1,0 +1,7 @@
+<can-import from="./auth-container.less">
+
+<div class='auth-component'>
+  <div class='auth-ui-container'>
+    <content></content>
+  </div>
+</div>

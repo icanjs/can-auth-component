@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import FormBaseViewModel from '../form-base-vm';
-import view from './login.stache';
-import '../forms.less';
+import Component from 'can-component'
+import FormBaseViewModel from '../form-base-vm'
+import view from './login.stache'
+import '../forms.less'
 
 export const ViewModel = FormBaseViewModel.extend({
   /**
@@ -16,15 +16,15 @@ export const ViewModel = FormBaseViewModel.extend({
    * with the auth data.
    */
   forgotClicked (event) {
-    event.preventDefault();
-    this.onForgot(this.username, this.password);
+    event.preventDefault()
+    this.onForgot(this.username, this.password)
   },
 
   /**
    * `handleForgot` is the function that gets run with the "forgot password" link is clicked.
    */
   onForgot () {
-    this.warn(`Pass an "onForgot" function to the ${this.formName} to handle "forgot password" clicks.`);
+    this.warn(`Pass an "onForgot" function to the ${this.formName} to handle "forgot password" clicks.`)
   },
 
   /**
@@ -33,10 +33,10 @@ export const ViewModel = FormBaseViewModel.extend({
   buttonText: {
     value: 'Login'
   }
-});
+})
 
 export default Component.extend({
   tag: 'login-form',
   ViewModel,
   view
-});
+})

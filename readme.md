@@ -194,7 +194,7 @@ The main demo shows how to use can-route based tabs together. You first need a b
 
 ```jsx
 <AuthContainer>
-	<Tabs activeTab={route.data.page} routeAttr='page' />
+	<Tabs activeTab={route.data.page} />
 
 	<Route data={{page: 'login'}} component={LoginForm} />
 	<Route data={{page: 'signup'}} component={SignupForm} />

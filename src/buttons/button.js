@@ -1,15 +1,15 @@
-import DefineMap from 'can-define/map/map';
-import Component from 'can-component';
-import view from './button.stache';
-import './button.less';
-import openPopup from 'feathers-authentication-popups';
+import DefineMap from 'can-define/map/map'
+import Component from 'can-component'
+import view from './button.stache'
+import './button.less'
+import openPopup from 'feathers-authentication-popups'
 
 export const ViewModel = DefineMap.extend({
   name: 'string',
   classSuffix: {
     type: 'string',
     get (lastSet) {
-      return lastSet || this.name.toLowerCase().replace(' ', '');
+      return lastSet || this.name.toLowerCase().replace(' ', '')
     }
   },
   url: 'string',
@@ -19,13 +19,13 @@ export const ViewModel = DefineMap.extend({
   popup: 'string',
   svg: 'string',
   openPopup (ev, url) {
-    ev.preventDefault();
-    openPopup(url);
+    ev.preventDefault()
+    openPopup(url)
   }
-});
+})
 
 export default Component.extend({
   tag: 'auth-button',
   ViewModel,
   view
-});
+})

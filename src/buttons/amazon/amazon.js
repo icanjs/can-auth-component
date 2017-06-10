@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import view from './amazon.stache';
-import {ViewModel as BaseViewModel} from '../button';
-import svg from './amazon.svg';
+import Component from 'can-component'
+import view from './amazon.stache'
+import {ViewModel as BaseViewModel} from '../button'
+import svg from './amazon.svg'
 
 export const ViewModel = BaseViewModel.extend({
   name: {
@@ -17,11 +17,10 @@ export const ViewModel = BaseViewModel.extend({
   },
   text: 'string',
   popup: 'boolean'
-});
+})
 
 export default Component.extend({
   tag: 'amazon-auth-button',
   ViewModel,
   view
-});
-
+})

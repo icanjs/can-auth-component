@@ -1,5 +1,5 @@
-import DefineMap from 'can-define/map/';
-import {devWarning} from 'can-auth-component/utils';
+import DefineMap from 'can-define/map/'
+import {devWarning} from 'can-auth-component/utils'
 
 export default DefineMap.extend({
   /**
@@ -23,7 +23,7 @@ export default DefineMap.extend({
   usernameFieldType: {
     type: 'string',
     get () {
-      return this.usernameField === 'email' ? 'email' : 'text';
+      return this.usernameField === 'email' ? 'email' : 'text'
     }
   },
   /**
@@ -38,7 +38,7 @@ export default DefineMap.extend({
    * The username calls this function onChange to update this viewModel.
    */
   usernameChanged (event) {
-    this.username = event.target.value;
+    this.username = event.target.value
   },
 
   /**
@@ -68,17 +68,17 @@ export default DefineMap.extend({
    * The password input calls this function onChange to update this viewModel.
    */
   passwordChanged (event) {
-    this.password = event.target.value;
+    this.password = event.target.value
   },
 
   /**
-   * `Model` is a can-connect compatible Model. Passing a model will create a 
+   * `Model` is a can-connect compatible Model. Passing a model will create a
    * new model instance and save it to the server.
    */
   Model: 'any',
 
   /**
-   * There are a few warnings that will show up by default. They can be turned 
+   * There are a few warnings that will show up by default. They can be turned
    * off by setting `suppressWarnings` to true.
    */
   suppressWarnings: false,
@@ -89,7 +89,7 @@ export default DefineMap.extend({
    */
   warn (message) {
     if (this.suppressWarnings !== true) {
-      devWarning(message);
+      devWarning(message)
     }
   },
 
@@ -98,14 +98,14 @@ export default DefineMap.extend({
    * with the auth data.
    */
   submitClicked (event) {
-    event.preventDefault();
+    event.preventDefault()
     let authData = {
       [this.usernameField]: this.username,
       [this.passwordField]: this.password
-    };
+    }
     this.handleSubmit(authData)
       .then(response => this.onSuccess(response))
-      .catch(error => this.uiError(error));
+      .catch(error => this.uiError(error))
   },
 
   /**
@@ -115,13 +115,13 @@ export default DefineMap.extend({
   handleSubmit (authData) {
     // If a can-connect Model was provided
     if (this.Model) {
-      return new this.Model(authData).save();
+      return new this.Model(authData).save()
     // If a Feathers service was provided.
     } else if (this.service) {
-      return this.service.create(authData);
+      return this.service.create(authData)
     // A handleSubmit function has to be provided.
     } else {
-      return Promise.reject(new Error(`${this.formName}: You must provide a Model or service attribute, or overwrite the handleSubmit function.`));
+      return Promise.reject(new Error(`${this.formName}: You must provide a Model or service attribute, or overwrite the handleSubmit function.`))
     }
   },
 
@@ -130,7 +130,7 @@ export default DefineMap.extend({
    * In most cases, it will need to be overwritten to handle custom requirements.
    */
   onSuccess (data) {
-    this.warn(`Pass an "onSuccess" function to the ${this.formName} to handle success.`);
+    this.warn(`Pass an "onSuccess" function to the ${this.formName} to handle success.`)
   },
 
   /**
@@ -138,7 +138,7 @@ export default DefineMap.extend({
    * It calls `onError`.
    */
   uiError (error) {
-    this.onError(error);
+    this.onError(error)
   },
 
   /**
@@ -146,10 +146,10 @@ export default DefineMap.extend({
    * logic in your app.
    */
   onError (error) {
-    this.warn(error);
+    this.warn(error)
   },
 
   buttonText: {
     type: 'string'
   }
-});
+})

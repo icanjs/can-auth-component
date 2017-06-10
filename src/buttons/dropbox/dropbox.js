@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import view from './dropbox.stache';
-import {ViewModel as BaseViewModel} from '../button';
-import svg from './dropbox.svg';
+import Component from 'can-component'
+import view from './dropbox.stache'
+import {ViewModel as BaseViewModel} from '../button'
+import svg from './dropbox.svg'
 
 export const ViewModel = BaseViewModel.extend({
   name: {
@@ -17,11 +17,10 @@ export const ViewModel = BaseViewModel.extend({
   },
   text: 'string',
   popup: 'boolean'
-});
+})
 
 export default Component.extend({
   tag: 'dropbox-auth-button',
   ViewModel,
   view
-});
-
+})

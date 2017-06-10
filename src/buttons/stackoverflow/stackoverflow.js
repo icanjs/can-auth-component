@@ -1,7 +1,7 @@
-import Component from 'can-component';
-import view from './stackoverflow.stache';
-import {ViewModel as BaseViewModel} from '../button';
-import svg from './stackoverflow.svg';
+import Component from 'can-component'
+import view from './stackoverflow.stache'
+import {ViewModel as BaseViewModel} from '../button'
+import svg from './stackoverflow.svg'
 
 export const ViewModel = BaseViewModel.extend({
   name: {
@@ -17,11 +17,10 @@ export const ViewModel = BaseViewModel.extend({
   },
   text: 'string',
   popup: 'boolean'
-});
+})
 
 export default Component.extend({
   tag: 'stackoverflow-auth-button',
   ViewModel,
   view
-});
-
+})
