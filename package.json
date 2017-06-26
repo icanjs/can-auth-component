@@ -18,7 +18,7 @@
     "postversion": "git push --tags && git checkout master && git branch -D release && git push",
     "testee": "testee test/test.html --browsers firefox",
     "test": "npm run lint && npm run testee",
-    "lint": "semistandard --fix",
+    "lint": "standard",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
@@ -74,10 +74,10 @@
   "devDependencies": {
     "can-view-autorender": "^3.0.3",
     "done-serve": "^0.2.0",
-    "semistandard": "^9.1.0",
+    "standard": "^10.0.2",
     "steal": "^1.0.4",
     "steal-qunit": "^1.0.0",
     "steal-tools": "^1.0.1",
-    "testee": "^0.3.0"
+    "testee": "^0.6.1"
   }
 }
